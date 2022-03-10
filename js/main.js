@@ -3,15 +3,18 @@ console.log("OK Js");
 //chiedi all’utente il suo nome e comunicagli se può partecipare o no alla festa.
 
 //Nomi Invitati
-const nomi = ["Gioia", "Giorgio", "Luca", "Mario"];
+const invitati = ["Gioia", "Giorgio", "Luca", "Mario"];
 
-let nomeUtente = prompt("Inserisci il tuo nome");
+let ospite = prompt("Inserisci il tuo nome");
 
-if (nomeUtente) {
-  for (let i = 0; i < nomi.length; i++) {
-    const nomeValido = nomi[i];
-    if (nomeUtente === nomeValido) {
-      console.log("Benvenuto");
-    }
+let messaggio = false;
+
+for (let i = 0; i < invitati.length; i++) {
+  if (invitati[i] === ospite) {
+    console.log("Benvenuto");
+    alert("Benvenuto");
+    messaggio = true;
+  } else {
+    console.log("Non sei stato invitato");
   }
 }
