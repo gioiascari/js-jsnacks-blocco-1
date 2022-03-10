@@ -4,3 +4,16 @@ console.log("Ok Js");
 let array = [];
 
 let i = 0;
+
+while (i < 6) {
+  let numero = parseInt(prompt("inserisci un numero"));
+
+  while (isNaN(numero)) {
+    let numero = parseInt(prompt("inserisci di nuovo un numero"));
+  }
+  if (numero % 2 != 0) {
+    array.push(numero);
+  }
+  i++;
+}
+console.log(array);
