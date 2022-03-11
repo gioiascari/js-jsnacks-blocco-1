@@ -11,10 +11,15 @@ let messaggio = false;
 
 for (let i = 0; i < invitati.length; i++) {
   if (invitati[i] === ospite) {
-    console.log("Benvenuto");
-    alert("Benvenuto");
     messaggio = true;
-  } else {
-    console.log("Non sei stato invitato");
   }
+}
+
+//If(con le azioni che devo utilizzare) va sempre fuori dal ciclo for
+if (messaggio === true) {
+  console.log("Benvenuto");
+  alert("Benvenuto");
+} else {
+  console.log("Non sei stato invitato");
+  alert("Non sei stato invitato");
 }
